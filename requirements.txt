@@ -4,4 +4,4 @@ pandas
 pydeck
 streamlit
 joblib
-sklearn
+scikit-learn
