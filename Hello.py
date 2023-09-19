@@ -7,7 +7,7 @@ import joblib
 def predict_value(value, classification=True):
     
     if classification is True:
-        model_filename = 'trained_model.joblib'
+        model_filename = 'trained_model_large.joblib'
     else:
         model_filename = 'trained_model_reg.joblib'
     pipeline = joblib.load(model_filename)
