@@ -52,10 +52,12 @@ input_features = [
     "num_passengers",
     "kid_on_board",
     "civility",
+    "country_name_us",
     "user_platform_age_year",
     "is_mac",
     "nb_of_logs",
     "seniority_of_client",
+    "month_depart",
     "boat_bookings_request_ratio",
     "destination_bookings_request_ratio",
     "country_bookings_request_ratio"
@@ -95,10 +97,19 @@ in_europe = st.sidebar.selectbox("in_europe", [1, 0])
 num_passengers = st.sidebar.selectbox("num_passengers", [i for i in range(0, 30)])
 kid_on_board = 1 if kids > 0 else 0
 civility = st.sidebar.selectbox("civility", ["Mr", "Ms", "Dr.", "Prof."])
+country_name_us = st.sidebar.selectbox("Select Country US", ['France', 'Germany', 'Italy', 'United States', 'United Kingdom','Spain', 'Switzerland', 'Poland', 'Russia', 'Australia', 'Austria',
+       'Belgium', 'Canada', 'Argentina', 'Netherlands', 'Brazil',
+       'South Africa', 'Ireland', 'Uruguay', 'Romania', 'Finland', 'Mexico',
+       'Hungary', 'Portugal', 'Thailand', 'Luxembourg ', 'Lithuania', 'Sweden',
+       'New Zealand', 'Puerto Rico', 'Singapore', 'Bolivia', 'Tunisia',
+       'Israel', 'Syria', 'Norway', 'Ukraine', 'Turkey', 'Cameroon', 'Greece',
+       'Paraguay', 'Ecuador', 'Egypt', 'Bulgaria', 'India', 'Chile', 'Lebanon',
+       'Pakistan', 'Hong Kong', 'Colombia'])
 user_platform_age_year = st.sidebar.selectbox("user_platform_age_year", [i for i in range(0, 30)])
 is_mac = st.sidebar.selectbox("is_mac", [1, 0])
 nb_of_logs = st.sidebar.slider("Select nb_of_logs", 0, 100, 1)
 seniority_of_client = st.sidebar.selectbox("seniority_of_client", [i for i in range(0, 30)])
+month_depart = st.sidebar.selectbox("Select Month", ['July','August','June','April','May','September','February','March','January','October','December','November'])
 boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ratio", 0, 1000, 10)
 destination_bookings_request_ratio = st.sidebar.slider("Select destination_bookings_request_ratio", 0, 1000, 10)
 country_bookings_request_ratio = st.sidebar.slider("Select country_bookings_request_ratio", 0, 1000, 10)
@@ -109,8 +120,8 @@ data = [[is_new_user,charter_type,destination_flexible, adults, kids, flexible_d
          Destination_in_top_20,total_requests_for_boat,boat_model_name_in_top_20,charter_in_top_5,
          monthly_average_requests,daily_average_requests,boat_monthly_average_requests,
          country_monthly_average_requests,request_date_day,hour_request,day_time_request,
-         days_before_departure,in_europe,num_passengers,kid_on_board,civility,
-         user_platform_age_year,is_mac,nb_of_logs,seniority_of_client,boat_bookings_request_ratio/100,
+         days_before_departure,in_europe,num_passengers,kid_on_board,civility,country_name_us,
+         user_platform_age_year,is_mac,nb_of_logs,seniority_of_client,month_depart,boat_bookings_request_ratio/100,
          destination_bookings_request_ratio/100,country_bookings_request_ratio/100]]
          
 value = pd.DataFrame(data=data, columns=input_features)
