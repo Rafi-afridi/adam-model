@@ -99,9 +99,9 @@ user_platform_age_year = st.sidebar.selectbox("user_platform_age_year", [i for i
 is_mac = st.sidebar.selectbox("is_mac", [1, 0])
 nb_of_logs = st.sidebar.slider("Select nb_of_logs", 0, 100, 1)
 seniority_of_client = st.sidebar.selectbox("seniority_of_client", [i for i in range(0, 30)])
-boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ratio", 0, 100, 1)
-destination_bookings_request_ratio = st.sidebar.slider("Select destination_bookings_request_ratio", 0, 100, 1)
-country_bookings_request_ratio = st.sidebar.slider("Select country_bookings_request_ratio", 0, 100, 1)
+boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ratio", 0, 1000, 10)
+destination_bookings_request_ratio = st.sidebar.slider("Select destination_bookings_request_ratio", 0, 1000, 10)
+country_bookings_request_ratio = st.sidebar.slider("Select country_bookings_request_ratio", 0, 1000, 10)
 
 
 data = [[is_new_user,charter_type,destination_flexible, adults, kids, flexible_date, 
