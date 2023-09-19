@@ -37,7 +37,6 @@ input_features = [
     "country_name_in_top_20",
     "total_requests_dest",
     "Destination_in_top_20",
-    "total_requests_for_boat",
     "boat_model_name_in_top_20",
     "charter_in_top_5",
     "monthly_average_requests",
@@ -82,7 +81,6 @@ trip_duration = st.sidebar.slider("Select trip_duration", 0, 1000, 50)
 country_name_in_top_20 = st.sidebar.selectbox(f"Country Name", preprocessing_steps['country_name_in_top_20']+["Other"])
 total_requests_dest = st.sidebar.slider("Select total_requests_dest", 0, 1000, 50)
 Destination_in_top_20 = st.sidebar.selectbox(f"Destination Name", preprocessing_steps['Destination_in_top_20']+["Other"])
-total_requests_for_boat = st.sidebar.slider("Select total_requests_for_boat", 0, 1000, 50)
 boat_model_name_in_top_20 = st.sidebar.selectbox(f"Boat Name", preprocessing_steps['boat_model_name_in_top_20']+["Other"])
 charter_in_top_5 = st.sidebar.selectbox(f"Charter", preprocessing_steps['charter_in_top_5']+["Other"])
 monthly_average_requests = st.sidebar.slider("Select monthly_average_requests", 0, 1000, 50)
@@ -117,7 +115,7 @@ country_bookings_request_ratio = st.sidebar.slider("Select country_bookings_requ
 
 data = [[is_new_user,charter_type,destination_flexible, adults, kids, flexible_date, 
          Request_Month,Request_Day,trip_duration,country_name_in_top_20,total_requests_dest,
-         Destination_in_top_20,total_requests_for_boat,boat_model_name_in_top_20,charter_in_top_5,
+         Destination_in_top_20,boat_model_name_in_top_20,charter_in_top_5,
          monthly_average_requests,daily_average_requests,boat_monthly_average_requests,
          country_monthly_average_requests,request_date_day,hour_request,day_time_request,
          days_before_departure,in_europe,num_passengers,kid_on_board,civility,country_name_us,
