@@ -108,9 +108,9 @@ is_mac = st.sidebar.selectbox("is_mac", [1, 0])
 nb_of_logs = st.sidebar.slider("Select nb_of_logs", 0, 100, 1)
 seniority_of_client = st.sidebar.selectbox("seniority_of_client", [i for i in range(0, 30)])
 month_depart = st.sidebar.selectbox("Select Month", ['July','August','June','April','May','September','February','March','January','October','December','November'])
-boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ratio", 0, 1000, 10)
-destination_bookings_request_ratio = st.sidebar.slider("Select destination_bookings_request_ratio", 0, 1000, 10)
-country_bookings_request_ratio = st.sidebar.slider("Select country_bookings_request_ratio", 0, 1000, 10)
+boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ratio", 0, 100, 1)
+destination_bookings_request_ratio = st.sidebar.slider("Select destination_bookings_request_ratio", 0, 100, 1)
+country_bookings_request_ratio = st.sidebar.slider("Select country_bookings_request_ratio", 0, 100, 1)
 
 
 data = [[is_new_user,charter_type,destination_flexible, adults, kids, flexible_date, 
