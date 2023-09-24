@@ -141,7 +141,7 @@ try:
 except:
     pass
 data = [[is_new_user,charter_type,destination_flexible, int(adults), int(kids), flexible_date, 
-         int(Request_Month,Request_Day),int(trip_duration),country_name_in_top_20,int(total_requests_dest),
+         Request_Month,Request_Day,int(trip_duration),country_name_in_top_20,int(total_requests_dest),
          Destination_in_top_20,boat_model_name_in_top_20,charter_in_top_5,
          int(monthly_average_requests),int(daily_average_requests),int(boat_monthly_average_requests),
          int(country_monthly_average_requests),request_date_day,hour_request,day_time_request,
