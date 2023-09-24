@@ -115,8 +115,6 @@ in_europe = st.sidebar.selectbox("in_europe", [1, 0])
 
 num_passengers = st.sidebar.selectbox("num_passengers", [i for i in range(0, 30)])
 
-kid_on_board = 1 if int(kids) > 0 else 0
-
 civility = st.sidebar.selectbox("civility", ["Mr", "Ms", "Dr.", "Prof."])
 country_name_us = st.sidebar.selectbox("Select Country US", ['France', 'Germany', 'Italy', 'United States', 'United Kingdom','Spain', 'Switzerland', 'Poland', 'Russia', 'Australia', 'Austria',
        'Belgium', 'Canada', 'Argentina', 'Netherlands', 'Brazil',
@@ -138,6 +136,7 @@ boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ra
 destination_bookings_request_ratio = st.sidebar.slider("Select destination_bookings_request_ratio", 0, 100, 1)
 country_bookings_request_ratio = st.sidebar.slider("Select country_bookings_request_ratio", 0, 100, 1)
 
+kid_on_board = 1 if int(kids) > 0 else 0
 
 data = [[is_new_user,charter_type,destination_flexible, int(adults), int(kids), flexible_date, 
          int(Request_Month,Request_Day),int(trip_duration),country_name_in_top_20,int(total_requests_dest),
