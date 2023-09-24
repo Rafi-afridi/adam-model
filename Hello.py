@@ -136,8 +136,10 @@ boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ra
 destination_bookings_request_ratio = st.sidebar.slider("Select destination_bookings_request_ratio", 0, 100, 1)
 country_bookings_request_ratio = st.sidebar.slider("Select country_bookings_request_ratio", 0, 100, 1)
 
-kid_on_board = 1 if int(kids) > 0 else 0
-
+try:
+    kid_on_board = 1 if int(kids) > 0 else 0
+except:
+    pass
 data = [[is_new_user,charter_type,destination_flexible, int(adults), int(kids), flexible_date, 
          int(Request_Month,Request_Day),int(trip_duration),country_name_in_top_20,int(total_requests_dest),
          Destination_in_top_20,boat_model_name_in_top_20,charter_in_top_5,
