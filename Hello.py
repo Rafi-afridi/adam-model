@@ -129,7 +129,7 @@ is_mac = st.sidebar.selectbox("is_mac", [1, 0])
 nb_of_logs = st.sidebar.slider("Select nb_of_logs", 0, 100, 1)
 
 #seniority_of_client = st.sidebar.selectbox("seniority_of_client", [i for i in range(0, 30)])
-seniority_of_client = int(st.text_input("Enter seniority_of_client"))
+seniority_of_client = st.sidebar.text_input("Enter seniority_of_client")
 
 month_depart = st.sidebar.selectbox("Select Month", ['July','August','June','April','May','September','February','March','January','October','December','November'])
 boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ratio", 0, 100, 1)
@@ -144,7 +144,7 @@ data = [[is_new_user,charter_type,destination_flexible, int(adults), int(kids), 
          int(monthly_average_requests),int(daily_average_requests),int(boat_monthly_average_requests),
          int(country_monthly_average_requests),request_date_day,hour_request,day_time_request,
          int(days_before_departure),in_europe,num_passengers,kid_on_board,civility,country_name_us,
-         user_platform_age_year,is_mac,nb_of_logs,seniority_of_client,month_depart,boat_bookings_request_ratio/100,
+         user_platform_age_year,is_mac,nb_of_logs,int(seniority_of_client),month_depart,boat_bookings_request_ratio/100,
          destination_bookings_request_ratio/100,country_bookings_request_ratio/100]]
          
 value = pd.DataFrame(data=data, columns=input_features)
