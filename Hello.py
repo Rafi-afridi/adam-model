@@ -161,5 +161,5 @@ if st.sidebar.button("Predict"):
     st.success("Prediction Complete!")
     st.write("Predicted Probabilities:")
     label, probablity = predict_value(value, classification=True)
-    probabilities = {"Probability of Booking Ship" : f"{100-probablity}%"}
+    probabilities = {"Probability of Booking Boat" : f"{100-probablity}%"}
     st.write(probabilities)
