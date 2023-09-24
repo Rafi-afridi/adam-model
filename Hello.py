@@ -74,43 +74,43 @@ charter_type = st.sidebar.selectbox("charter_type?", [0, 1, 2, 3, 4, 5])
 destination_flexible = st.sidebar.selectbox("Destination is Flexible", [1, 0])
 
 #adults = st.sidebar.selectbox("No of Adults", [i for i in range(0, 20)])
-adults = st.sidebar.text_input("Enter No of Adults")
+adults = st.sidebar.text_input("Enter No of Adults",value='0')
 
 #kids = st.sidebar.selectbox("No of Kids", [i for i in range(0, 20)])
-kids = st.sidebar.text_input("Enter No of Kids")
+kids = st.sidebar.text_input("Enter No of Kids",value='0')
 
 flexible_date = st.sidebar.selectbox("Date is Flexible or not?", [1, 0])
 Request_Month = st.sidebar.selectbox("Request Month", [i for i in range(1, 13)])
 Request_Day = st.sidebar.selectbox(f"Request Day", [i for i in range(1, 32)])
 
 #trip_duration = st.sidebar.slider("Select trip_duration", 0, 1000, 50)
-trip_duration = st.sidebar.text_input("Enter Trip Duration")
+trip_duration = st.sidebar.text_input("Enter Trip Duration",value='0')
 
 country_name_in_top_20 = st.sidebar.selectbox(f"Country Name", preprocessing_steps['country_name_in_top_20']+["Other"])
 
 #total_requests_dest = st.sidebar.slider("Select total_requests_dest", 0, 1000, 50)
-total_requests_dest = st.sidebar.text_input("Enter total_requests_dest")
+total_requests_dest = st.sidebar.text_input("Enter total_requests_dest",value='0')
 
 Destination_in_top_20 = st.sidebar.selectbox(f"Destination Name", preprocessing_steps['Destination_in_top_20']+["Other"])
 boat_model_name_in_top_20 = st.sidebar.selectbox(f"Boat Name", preprocessing_steps['boat_model_name_in_top_20']+["Other"])
 charter_in_top_5 = st.sidebar.selectbox(f"Charter", preprocessing_steps['charter_in_top_5']+["Other"])
 
 #monthly_average_requests = st.sidebar.slider("Select monthly_average_requests", 0, 1000, 50)
-monthly_average_requests = st.sidebar.text_input("Enter monthly_average_requests")
+monthly_average_requests = st.sidebar.text_input("Enter monthly_average_requests",value='0')
 
 #daily_average_requests = st.sidebar.slider("Select daily_average_requests", 0, 1000, 50)
-daily_average_requests = st.sidebar.text_input("Enter daily_average_requests")
+daily_average_requests = st.sidebar.text_input("Enter daily_average_requests",value='0')
 
 #boat_monthly_average_requests = st.sidebar.slider("Select boat_monthly_average_requests", 0, 1000, 50)
-boat_monthly_average_requests = st.sidebar.text_input("Enter boat_monthly_average_requests")
+boat_monthly_average_requests = st.sidebar.text_input("Enter boat_monthly_average_requests",value='0')
 
 #country_monthly_average_requests = st.sidebar.slider("Select country_monthly_average_requests", 0, 1000, 50)
-country_monthly_average_requests = st.sidebar.text_input("Enter country_monthly_average_requests")
+country_monthly_average_requests = st.sidebar.text_input("Enter country_monthly_average_requests",value='0')
 
 request_date_day = st.sidebar.selectbox("Request Day Name", ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"])
 hour_request = st.sidebar.selectbox("hour_request", [i for i in range(0, 24)])
 day_time_request = st.sidebar.selectbox("day_time_request", ["evening", "afternoon", "morning", "night"])
-days_before_departure = st.sidebar.slider("Select days_before_departure", 0, 100, 1)
+days_before_departure = st.sidebar.slider("Select days_before_departure", 0, 1000, 1)
 in_europe = st.sidebar.selectbox("in_europe", [1, 0])
 
 num_passengers = st.sidebar.selectbox("num_passengers", [i for i in range(0, 30)])
@@ -126,10 +126,10 @@ country_name_us = st.sidebar.selectbox("Select Country US", ['France', 'Germany'
        'Pakistan', 'Hong Kong', 'Colombia'])
 user_platform_age_year = st.sidebar.selectbox("user_platform_age_year", [i for i in range(0, 30)])
 is_mac = st.sidebar.selectbox("is_mac", [1, 0])
-nb_of_logs = st.sidebar.slider("Select nb_of_logs", 0, 100, 1)
+nb_of_logs = st.sidebar.slider("Select nb_of_logs", 0, 100000, 1)
 
 #seniority_of_client = st.sidebar.selectbox("seniority_of_client", [i for i in range(0, 30)])
-seniority_of_client = st.sidebar.text_input("Enter seniority_of_client")
+seniority_of_client = st.sidebar.text_input("Enter seniority_of_client",value='0')
 
 month_depart = st.sidebar.selectbox("Select Month", ['July','August','June','April','May','September','February','March','January','October','December','November'])
 boat_bookings_request_ratio = st.sidebar.slider("Select boat_bookings_request_ratio", 0, 100, 1)
