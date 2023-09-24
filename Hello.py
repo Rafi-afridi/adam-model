@@ -115,7 +115,7 @@ in_europe = st.sidebar.selectbox("in_europe", [1, 0])
 
 num_passengers = st.sidebar.selectbox("num_passengers", [i for i in range(0, 30)])
 
-kid_on_board = 1 if kids > 0 else 0
+kid_on_board = 1 if int(kids) > 0 else 0
 
 civility = st.sidebar.selectbox("civility", ["Mr", "Ms", "Dr.", "Prof."])
 country_name_us = st.sidebar.selectbox("Select Country US", ['France', 'Germany', 'Italy', 'United States', 'United Kingdom','Spain', 'Switzerland', 'Poland', 'Russia', 'Australia', 'Austria',
