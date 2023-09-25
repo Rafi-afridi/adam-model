@@ -151,6 +151,7 @@ data = [[is_new_user,charter_type,destination_flexible, int(adults), int(kids), 
          
 value = pd.DataFrame(data=data, columns=input_features)
 
+# UI
 # Create a button to trigger predictions
 if st.sidebar.button("Predict"):
     # Simulate a loading process
