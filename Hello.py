@@ -140,14 +140,14 @@ try:
     kid_on_board = 1 if int(kids) > 0 else 0
 except:
     pass
-data = [[is_new_user,charter_type,destination_flexible, int(adults), int(kids), flexible_date, 
-         Request_Month,Request_Day,int(trip_duration),country_name_in_top_20,int(total_requests_dest),
-         Destination_in_top_20,boat_model_name_in_top_20,charter_in_top_5,
-         int(monthly_average_requests),int(daily_average_requests),int(boat_monthly_average_requests),
-         int(country_monthly_average_requests),request_date_day,hour_request,day_time_request,
-         int(days_before_departure),in_europe,num_passengers,kid_on_board,civility,country_name_us,
-         user_platform_age_year,is_mac,nb_of_logs,int(seniority_of_client),month_depart,boat_bookings_request_ratio/100,
-         destination_bookings_request_ratio/100,country_bookings_request_ratio/100]]
+data = [[int(is_new_user),int(charter_type),float(destination_flexible), float(adults), float(kids), float(flexible_date), 
+         int(Request_Month),int(Request_Day),float(trip_duration),str(country_name_in_top_20),float(total_requests_dest),
+         str(Destination_in_top_20),str(boat_model_name_in_top_20),str(charter_in_top_5),
+         float(monthly_average_requests),float(daily_average_requests),float(boat_monthly_average_requests),
+         float(country_monthly_average_requests),str(request_date_day),int(hour_request),str(day_time_request),
+         int(days_before_departure),int(in_europe),int(num_passengers),int(kid_on_board),str(civility),str(country_name_us),
+         float(user_platform_age_year),float(is_mac),float(nb_of_logs),float(seniority_of_client),str(month_depart),float(boat_bookings_request_ratio/100),
+         float(destination_bookings_request_ratio/100),float(country_bookings_request_ratio/100)]]
          
 value = pd.DataFrame(data=data, columns=input_features)
 
